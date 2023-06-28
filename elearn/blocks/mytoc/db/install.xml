@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="blocks/mytoc/db" VERSION="20230401" COMMENT="XMLDB file for Moodle blocks/mytoc"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="fet_phy_other_city" COMMENT="This table saves information about an instance of phy other cities courses.">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="seq_no" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="year" TYPE="int" LENGTH="3" NOTNULL="true" SEQUENCE="false" COMMENT=""/>
+        <FIELD NAME="class_name" TYPE="char" LENGTH="120" NOTNULL="true" SEQUENCE="false" COMMENT="班期名稱"/>
+        <FIELD NAME="class_no" TYPE="char" LENGTH="7" NOTNULL="true" SEQUENCE="false" COMMENT="班期代碼"/>
+        <FIELD NAME="term" TYPE="int" LENGTH="3" NOTNULL="true" SEQUENCE="false" COMMENT="期別"/>
+        <FIELD NAME="reason" TYPE="int" LENGTH="1" NOTNULL="true" SEQUENCE="false" COMMENT="季別"/>
+        <FIELD NAME="start_date" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="最佳時段起日"/>
+        <FIELD NAME="end_date" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="最佳時段迄日"/>
+        <FIELD NAME="apply_sdate1" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="報名開始時間"/>
+        <FIELD NAME="apply_edate1" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT="報名結束時間"/>        
+        <FIELD NAME="apply_sdate2" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" COMMENT="二次報名開始時間"/>
+        <FIELD NAME="apply_edate2" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" COMMENT="二次報名結束時間"/>
+        <FIELD NAME="worker" TYPE="char" LENGTH="11" NOTNULL="false" SEQUENCE="false" COMMENT="承辦人證號"/>
+        <FIELD NAME="only_servant" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="0" SEQUENCE="false" COMMENT="限公務員報名"/>
+        <FIELD NAME="visible" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="1" SEQUENCE="false" COMMENT=""/>
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT=""/>
+        <FIELD NAME="timemodified" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" COMMENT=""/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="The unique id for this instance."/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="year" UNIQUE="false" FIELDS="year" COMMENT=""/>
+        <INDEX NAME="class_no" UNIQUE="false" FIELDS="class_no" COMMENT=""/>
+        <INDEX NAME="start_date" UNIQUE="false" FIELDS="start_date" COMMENT=""/>
+        <INDEX NAME="end_date" UNIQUE="false" FIELDS="end_date" COMMENT=""/>
+        <INDEX NAME="worker" UNIQUE="false" FIELDS="worker" COMMENT=""/>
+        <INDEX NAME="only_servant" UNIQUE="false" FIELDS="only_servant" COMMENT=""/>
+      </INDEXES>
+    </TABLE>
+    <TABLE NAME="fet_phy_other_city_enrol" COMMENT="">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="oc_id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="uid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" COMMENT=""/>
+        <FIELD NAME="idno" TYPE="char" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="usercreated" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT=""/>
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT=""/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="The unique id for this instance."/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="cid" UNIQUE="false" FIELDS="oc_id" COMMENT=""/>
+        <INDEX NAME="uid" UNIQUE="false" FIELDS="uid" COMMENT=""/>
+        <INDEX NAME="idno" UNIQUE="false" FIELDS="idno" COMMENT=""/>
+        <INDEX NAME="cuid" UNIQUE="false" FIELDS="usercreated" COMMENT=""/>
+      </INDEXES>
+    </TABLE>
+    <TABLE NAME="fet_phy_other_city_log" COMMENT="">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true"/>
+        <FIELD NAME="oc_id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="uid" TYPE="int" LENGTH="10" NOTNULL="false" SEQUENCE="false" COMMENT=""/>
+        <FIELD NAME="idno" TYPE="char" LENGTH="10" NOTNULL="true" SEQUENCE="false"/>
+        <FIELD NAME="status" TYPE="int" LENGTH="1" NOTNULL="true" DEFAULT="1" SEQUENCE="false" COMMENT=""/>
+        <FIELD NAME="remark" TYPE="text" NOTNULL="false" SEQUENCE="false" COMMENT=""/>
+        <FIELD NAME="usercreated" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT=""/>
+        <FIELD NAME="timecreated" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" COMMENT=""/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id" COMMENT="The unique id for this instance."/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="cid" UNIQUE="false" FIELDS="oc_id" COMMENT=""/>
+        <INDEX NAME="uid" UNIQUE="false" FIELDS="uid" COMMENT=""/>
+        <INDEX NAME="id_no" UNIQUE="false" FIELDS="idno" COMMENT=""/>
+        <INDEX NAME="cuid" UNIQUE="false" FIELDS="usercreated" COMMENT=""/>
+      </INDEXES>
+    </TABLE>
+  </TABLES>
+</XMLDB>

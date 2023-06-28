@@ -1,0 +1,139 @@
+/*
+ * @package    block_mytoc(My Table Of Content)
+ * @author     Maria Tan <maria@click-ap.com>
+ * @copyright  2023 Click-AP {@link https://www.click-ap.com}
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+.block_mytoc .coursebox .mytoc-cimbox {
+    height: 5rem;
+    position: relative;
+    margin-right: -1px;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.block_mytoc .coursebox .mytoc-status{
+    float: left;
+    background-color: #ccc;
+    border-radius: 5%;
+    text-align: center;
+    /*line-height: normal;*/
+    vertical-align: middle;
+}
+.block_mytoc .coursebox .mytoc-status p{
+    margin: 0.5rem 0 !important;
+}
+
+.block_mytoc .coursebox .mytoc-completion{
+    float: left;
+    background-color: #ccc;
+    border-radius: 5%;
+    text-align: center;
+    /*line-height: normal;*/
+    vertical-align: middle;
+}
+
+@media (min-width: 1200px) {
+    /*
+    .coursebox .content .mytoc-status{
+        line-height: 2.5em;
+    }
+    */
+}
+
+.block_mytoc .coursebox .mytoc-status .title{
+    font-size: 12px;
+    margin: 0 2px 0 2px;
+}
+
+.block_mytoc .coursebox .mytoc-action{
+    float: right;
+    border-radius: 5%;
+    text-align: center;
+}
+
+.block_mytoc .coursebox .mytoc-action2{
+    float: right;
+    border-radius: 5%;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.block_mytoc .coursebox .mytoc-action .favorite{
+    margin-bottom: 5px;
+}
+
+.block_mytoc .coursebox .mytoc-action .button, input[type="submit"]{
+    /*padding: 5px 5px 5px 5px !important;*/
+    margin: 2px 0 2px 0 !important;
+    box-shadow: unset !important;
+}
+
+.block_mytoc .coursebox {
+    margin: 0px !important;
+}
+
+.block_mytoc .coursebox .media-body h4{
+    color: #082048 !important;
+    font-weight: bold;
+    margin: 5px 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+    line-height: normal;
+    font-weight: bold!important;
+}
+
+.block_mytoc .coursebox .col-md-3,
+.block_mytoc .coursebox .col-md-4, 
+.block_mytoc .coursebox .col-md-6, 
+.block_mytoc .coursebox .col-md-8,
+.block_mytoc .coursebox .col-md-9 {
+    padding: 2px !important;
+}
+
+.block_mytoc .coursebox .course-info-container {
+    border: 1px solid #dee2e6;
+}
+
+
+.block-mytoc .coursebox .course-info-container .media-body .mytoc-summary {
+    font-size: .2rem;
+    line-height: normal;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.block-mytoc .coursebox .course-info-container .media-body .singlebutton button[type="submit"],
+.block-mytoc .coursebox .course-info-container .media-body .mytoc-action input[type="button"] {
+    padding: 0.1rem 1rem !important;
+}
+
+#mytoc-other-cities-class-list .singlebutton input[type="submit"]{
+    box-shadow: unset !important;
+    margin: unset !important;
+    padding: 3px 6px !important;
+}
+
+.block-mytoc .uploadbutton input[type="submit"]{
+    float:right;
+}
+
+.block_mytoc table a ,
+#page-blocks-mytoc-upload form a {
+    color: #1d9d74 !important;
+}
+
+.block-mytoc table a:hover ,
+#page-blocks-mytoc-upload form a:hover {
+    color: #15579f !important;
+}
+
